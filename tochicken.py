@@ -5,7 +5,7 @@ def to_chicken(text:str):
     characters = '\n !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~'
     for character in text:
         chicken_amount = characters.index(character)
-        chickens = " fried chicken" * chicken_amount
+        chickens = " henry" * chicken_amount
         code += '\n' + chickens[1:]
     return "\n".join(code.split('\n')[1:])
 

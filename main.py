@@ -11,21 +11,21 @@ def execute():
         code = file.read()
         file.close()
         characters = '\n !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~'
-        if code.lower().replace('fried chicken', '').replace(' ', '').replace('\n', '') == "":
+        if code.lower().replace('henry', '').replace(' ', '').replace('\n', '') == "":
             real_code = ""
             for line in code.split('\n'):
-                chicken_amount = line.lower().count("fried chicken")
+                chicken_amount = line.lower().count("henry")
                 if chicken_amount >= len(characters):
-                    print("Chicken was MUTATED!!!")
+                    print("Henry was MUTATED!!!")
                 else:
                     character = characters[chicken_amount]
                 real_code += str(character)
             try:
                 cells_execute(real_code)
             except:
-                print("Chicken was OVERFRIED!!!")
+                print("Henry lost BRAINCELLS!!!")
         else:
-            print("Chicken had BIRD FLU!!!")
+            print("Henry had IDIOT FLU!!!")
     except:
         print("Please input a valid file path...")
 
@@ -233,7 +233,7 @@ def cells_execute(__codeline__:str):
 
 
 win = tkinter.Tk()
-win.title("Fried Chicken")
+win.title("henry")
 win.configure(padx=20, pady=20)
 btn1 = tkinter.Button(text="Browse Code File And Run In Console", command=execute)
 btn1.pack()
